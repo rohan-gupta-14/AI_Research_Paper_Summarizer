@@ -1,0 +1,24 @@
+# Research Paper Insight Extractor - Dependencies
+# Python 3.8+ required
+
+# Web Framework
+streamlit>=1.28.0
+
+# PDF Processing
+pdfplumber>=0.10.0
+
+# LLM Integration
+openai>=1.3.0
+
+# Vector Embeddings and Search
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.4
+
+# PDF Export
+reportlab>=4.0.0
+
+# Numerical Computing (required by FAISS and sentence-transformers)
+numpy>=1.24.0
+
+# Additional utilities
+python-dotenv>=1.0.0
