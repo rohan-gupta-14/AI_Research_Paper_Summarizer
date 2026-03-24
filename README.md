@@ -147,5 +147,3 @@ The application uses `gpt-4o-mini` by default for cost-effective processing. To 
 For large papers, you can adjust chunking parameters in `utils/chat_engine.py`:
 - `chunk_size`: Characters per chunk (default: 500)
 - `chunk_overlap`: Overlap between chunks (default: 100)
-
-

@@ -8,13 +8,11 @@ import os
 from io import BytesIO
 from datetime import datetime
 
-# Import utility modules
 from utils.pdf_parser import PDFParser
 from utils.summarizer import PaperSummarizer
 from utils.insight_extractor import InsightExtractor
 from utils.chat_engine import ChatEngine
 
-# Try to import reportlab for PDF export
 try:
     from reportlab.lib.pagesizes import letter
     from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -26,10 +24,6 @@ except ImportError:
     REPORTLAB_AVAILABLE = False
 
 
-# ============================================================================
-# PAGE CONFIGURATION
-# ============================================================================
-
 st.set_page_config(
     page_title="AI Summarizer",
     page_icon=None,
@@ -37,10 +31,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-
-# ============================================================================
-# CUSTOM CSS STYLES
-# ============================================================================
 
 def get_custom_css() -> str:
     """Generate custom CSS for the application."""
@@ -455,10 +445,6 @@ def get_custom_css() -> str:
     </style>
     """
 
-
-# ============================================================================
-# HELPER FUNCTIONS
-# ============================================================================
 
 def create_text_download(content: str, filename: str) -> bytes:
     """Create downloadable text file."""
@@ -1095,10 +1081,6 @@ def generate_full_report() -> str:
 
     return "\n".join(report_parts)
 
-
-# ============================================================================
-# MAIN APPLICATION
-# ============================================================================
 
 def main():
     """Main application entry point."""
